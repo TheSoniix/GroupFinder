@@ -50,30 +50,14 @@ public class GroupStoreImpl implements GroupStore {
   }
 
   @Override
-  public Group searchStudent(Student student) {
+  public Boolean searchStudent(Student student) {
     for (Group currGroup : runtimeStore) {
       for (Student currStudent : currGroup.getMembers()) {
         if (currStudent == student) {
-          return currGroup;
+          return true;
         }
       }
     }
     return null;
   }
-
-  public boolean searchTutor(Tutor tutor) {
-    for (Group currGroup : runtimeStore) {
-      if (currGroup.getTutor() == tutor) {
-        return true;
-      }
-    }
-    return false;
-  }
-
-  public void deleteStudentFromGroup(Student student) {
-    for (Group currGroup : runtimeStore) {
-      currGroup.getMembers().remove(student);
-    }
-  }
-
 }

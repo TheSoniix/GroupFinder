@@ -6,22 +6,28 @@ import de.thm.mni.store.UserStore;
 import io.vertx.core.Vertx;
 import io.vertx.ext.web.Router;
 import io.vertx.ext.web.RoutingContext;
-
 import java.util.*;
+
 
 public class CandidatesHandler {
   private Vertx vertx;
   private final UserStore<Student> studentStore;
   private final GroupStore groupStore;
 
-
+  /**
+   * A constructor of the class CandidatesHandler that initialize vertx and the instances of the Stores.
+   * @param vertx An instance to be able to communicate with Vertx.
+   */
   public CandidatesHandler(Vertx vertx) {
     this.vertx = vertx;
     this.studentStore = UserStore.getStoreStudent();
     this.groupStore = GroupStore.getStore();
   }
 
-
+  /**
+   * Method which assigns routes to the appropriate method.
+   * @return the route that was called.
+   */
   public Router getRouter() {
     var router = Router.router(vertx);
     router.get("/").handler(this::getCandidates);
@@ -49,7 +55,7 @@ public class CandidatesHandler {
 
     for (Student currStudent : studentStore.getAll()) {
       var searchStudent = groupStore.searchStudent(currStudent);
-      if (searchStudent == null && !currStudent.getUsername().equals(username)) {
+      if (!searchStudent && !currStudent.getUsername().equals(username)) {
         candidatesList.add(currStudent);
       } else if (currStudent.getUsername().equals(username)) {
         forStudent = currStudent;

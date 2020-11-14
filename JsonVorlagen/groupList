@@ -1,0 +1,116 @@
+Student 1:
+{
+"fname": "string",
+"sname": "string",
+"username": "string",
+"email": "string",
+"password": "string",
+"strengths": [
+"Medien"
+],
+"weaknesses": [
+"string"
+]
+}
+
+
+Student 2:
+{
+"fname": "string",
+"sname": "string",
+"username": "string1",
+"email": "string",
+"password": "string",
+"strengths": [
+"It"
+],
+"weaknesses": [
+"string"
+]
+}
+
+
+Student 3:
+{
+"fname": "string",
+"sname": "string",
+"username": "string2",
+"email": "string",
+"password": "string",
+"strengths": [
+"Bwl"
+],
+"weaknesses": [
+"string"
+]
+}
+
+Student 4:
+{
+"fname": "string",
+"sname": "string",
+"username": "string3",
+"email": "string",
+"password": "string",
+"strengths": [
+"string"
+],
+"weaknesses": [
+"string"
+]
+}
+
+------------------------------------------------------------
+Tutor 1:
+{
+"fname": "string",
+"sname": "string",
+"username": "string4",
+"email": "string",
+"password": "string",
+"competencies": [
+"Medien",
+"It"
+],
+"capacity": 4
+}
+
+
+Tutor 2:
+{
+"fname": "string",
+"sname": "string",
+"username": "string5",
+"email": "string",
+"password": "string",
+"competencies": [
+"Medien",
+"It",
+"Bwl"
+],
+"capacity": 0
+}
+
+Tutor 3:
+{
+"fname": "string",
+"sname": "string",
+"username": "string6",
+"email": "string",
+"password": "string",
+"competencies": [
+"Medien"
+],
+"capacity": 2
+}
+
+---------------------------------------------------------
+
+Abfrage:
+
+[
+  "string",
+  "string1",
+  "string2",
+  "string3"
+]

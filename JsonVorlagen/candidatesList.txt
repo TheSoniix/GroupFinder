@@ -1,0 +1,66 @@
+Student 1:
+{
+"fname": "string",
+"sname": "string",
+"username": "string",
+"email": "string",
+"password": "string",
+"strengths": [
+"string"
+],
+"weaknesses": [
+"Medien",
+"Bwl"
+]
+}
+
+Student 2:
+{
+"fname": "string",
+"sname": "string",
+"username": "string1",
+"email": "string",
+"password": "string",
+"strengths": [
+"Medien",
+"Bwl",
+"Fußball"
+],
+"weaknesses": [
+"string"
+]
+}
+
+
+Student 3:
+{
+"fname": "string",
+"sname": "string",
+"username": "string2",
+"email": "string",
+"password": "string",
+"strengths": [
+"It",
+"Bwl",
+"Fußball"
+],
+"weaknesses": [
+"string"
+]
+}
+
+Student 4:
+{
+"fname": "string",
+"sname": "string",
+"username": "string3",
+"email": "string",
+"password": "string",
+"strengths": [
+"Medien",
+"Essen"
+],
+"weaknesses": [
+"string"
+]
+}

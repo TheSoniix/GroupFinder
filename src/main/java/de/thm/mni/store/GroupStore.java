@@ -2,61 +2,61 @@ package de.thm.mni.store;
 
 import de.thm.mni.model.Group;
 import de.thm.mni.model.Student;
-import de.thm.mni.model.Tutor;
 import de.thm.mni.store.impl.GroupStoreImpl;
 
 import java.util.Optional;
 import java.util.Set;
 
+/**
+ * Store to save group.
+ */
 public interface GroupStore {
 
   /**
-   * Store to save users.
+   * @return The instance of the group store.
    */
-
-  /**
-   * @return The instance of the user store.
-   */
-
   static GroupStore getStore() {
     return GroupStoreImpl.getInstance();
   }
 
 
   /**
-   * Store a user into the store. If the user already exists, it will be overwritten.
-   *
+   * Store a group into the store. If the group already exists, it will be overwritten.
    * @param group The group to store.
    */
   void store(Group group);
 
   /**
-   * Searches and returns a user by username.
+   * Searches and returns a group by id.
    *
-   * @param id The username of the user to find.
-   * @return A non-empty optional of a user u with u.getUsername() = username exists.
+   * @param id The id of the group to find.
+   * @return A non-empty optional of a group u with g.getId() = id exists.
    * Otherwise the optional is empty.
    */
   Optional<Group> find(Integer id);
 
   /**
-   * Remove a user from the store. If the user does not exists, the call does nothing.
-   *
-   * @param group The user to remove.
+   * Remove a group from the store. If the group does not exists, the call does nothing.
+   * @param group The group to remove.
    */
   void delete(Group group);
 
   /**
-   * @return Return all stored students.
+   * @return Return all stored groups.
    */
   Set<Group> getAll();
 
+  /**
+   * @return Return the size of the instance of GroupStore.
+   */
   int getSize();
 
-  Group searchStudent(Student student);
+  /**
+   * A method to check, whether a student is already am member of a group.
+   * @param student The student we are looking for.
+   * @return Returns true if the student is found.
+   */
+  Boolean searchStudent(Student student);
 
-  boolean searchTutor(Tutor tutor);
-
-  void deleteStudentFromGroup(Student student);
 
 }
